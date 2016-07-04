@@ -1,0 +1,96 @@
+body {
+	
+	&[class*='theme-'], *[class*='theme-'] {
+		
+		
+		&.theme-dev {
+			
+			@dbg-dline-w:2px;
+			@dbg-sline-w:1px;
+			@dbg-hover-sline-w:5px;
+			
+			outline: @dbg-dline-w dotted red;
+			#fe.bi('chess-bg.png');
+			
+			* {
+				outline:@dbg-dline-w dotted green;
+				
+				&:hover {
+					outline:@dbg-hover-sline-w solid black;
+				}
+				
+				& * {
+					outline:@dbg-dline-w dotted orange;
+					
+					& * {
+						outline:@dbg-dline-w dotted blue;
+						
+						& * {
+							outline:@dbg-sline-w solid red;
+							
+							& * {
+								outline:@dbg-sline-w solid green;
+								
+								& * {
+									outline:@dbg-sline-w solid orange;
+									
+									& * {
+										outline:@dbg-sline-w solid blue;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		
+		&.theme-b0w {
+			#fe.color(#000000);
+			#fe.bg(#ffffff);
+		}
+		
+		&.theme-w0b {
+			#fe.color(#ffffff);
+			#fe.bg(#000000);
+		}
+		
+	}
+	
+	
+	&, &[data-state="default"] {
+		
+	}
+	
+	
+	
+	&, &[data-fecss-modal="no-modal"] {
+		
+	}
+	
+	
+	
+	&, &[data-context="container"], & *[data-context="container"] {
+		
+	}
+	&[data-context="design"], & *[data-context="design"] {
+		
+	}
+	&[data-context="title"], & *[data-context="title"] {
+		
+	}
+	&[data-context="text"], & *[data-context="text"] {
+		
+	}
+	&[data-context="image"], & *[data-context="image"] {
+		
+	}
+	
+	
+	
+	&.is-mainpage {
+		
+	}
+	
+}
