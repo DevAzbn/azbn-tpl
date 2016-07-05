@@ -49,15 +49,24 @@
 			list-style-type:none;
 			transition:all @trans-speed ease;
 			.mp0();
-			padding:10px;
 			
 			a {
+				display:block;
+				padding:10px;
 				#fe.color(#000000);
 				#fe.underline(none);
 			}
 			
 			&.active {
-				#fe.bg(#ffffff);
+				#fe.bg(rgba(245,248,250,1));
+				
+				a {
+					#fe.color(#000000);
+				}
+			}
+			
+			&:hover {
+				#fe.bg(rgba(245,248,250,1));
 				
 				a {
 					#fe.color(#000000);
@@ -65,5 +74,4 @@
 			}
 		}
 	}
-	
 }
