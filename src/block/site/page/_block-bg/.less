@@ -1,0 +1,69 @@
+.b-item {
+	
+	&, &[data-context="container"] {
+		
+	}
+	&[data-context="design"] {
+		
+	}
+	&[data-context="title"] {
+		
+	}
+	&[data-context="text"] {
+		
+	}
+	&[data-context="image"] {
+		
+	}
+	&[data-context="menu"] {
+		#fe.bg(rgba(190,245,116,1));
+	}
+	&[data-context="menu2"] {
+		#fe.bg(rgba(245,248,250,1));
+	}
+	
+/*
+
+фисташковый 190,245,116 #bef574
+
+123,168,63		#7ba83f
+209,255,146		#d1ff92
+190,245,116		#bef574
+147,46,168		#932ea8
+222,116,245		#de74f5
+
+@c-rgb-l2:	rgba(123,168,63,1);
+@c-rgb-l1:	rgba(209,255,146,1);
+@c-rgb-c0:	rgba(190,245,116,1);
+@c-rgb-r1:	rgba(147,46,168,1);
+@c-rgb-r2:	rgba(222,116,245,1);
+
+приятный серый 245,248,250 #f5f8fa
+
+*/
+	
+	.b-menu-1, .b-menu-2 {
+		.mp0();
+		
+		li {
+			list-style-type:none;
+			transition:all @trans-speed ease;
+			.mp0();
+			padding:10px;
+			
+			a {
+				#fe.color(#000000);
+				#fe.underline(none);
+			}
+			
+			&.active {
+				#fe.bg(#ffffff);
+				
+				a {
+					#fe.color(#000000);
+				}
+			}
+		}
+	}
+	
+}
