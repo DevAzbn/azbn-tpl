@@ -1,0 +1,57 @@
+.menu-btn-block {
+	position:fixed;
+	bottom:10%;
+	right:10%;
+	#fe.w(128px);
+	#fe.h(128px);
+	
+	.menu-btn {
+		transition:all @trans-speed / 1.25 ease;
+		display:inline-block;
+		position:absolute;
+		left:0;
+		top:0;
+		border:12px #000000 solid;
+		border-radius:50%;
+		box-shadow: 0 0 24px #000000;
+		#fe.w(100%);
+		#fe.h(100%);
+		#fe.bg(transparent);
+		
+		&:before, &:after {
+			transition:all @trans-speed / 1.25 ease;
+			content:'';
+			position:absolute;
+			left:25%;
+			right:25%;
+			#fe.bg(#000000);
+			#fe.h(10%);
+		}
+		&:before {
+			top:31%;
+		}
+		&:after {
+			bottom:31%;
+		}
+		
+		&:hover {
+			border-color:rgba(190,245,116,1);
+			box-shadow: 0 0 6px #000000;
+			#fe.bg(rgba(0,0,0,0.33));
+			
+			&:before, &:after {
+				#fe.bg(rgba(190,245,116,1));
+			}
+			&:before {
+				top:35%;
+			}
+			&:after {
+				bottom:35%;
+			}
+		}
+		
+		&:focus {
+			#fe.bg(rgba(255,255,255,0.33));
+		}
+	}
+}
