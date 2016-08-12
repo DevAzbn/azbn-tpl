@@ -1475,7 +1475,17 @@ body {
 	}
 }
 .b-menu-2 {
-	
+	li {
+		a {
+			
+		}
+		
+		&.active {
+			a {
+				#fe.bg(rgba(255,255,255,1));
+			}
+		}
+	}
 }
 .b-item {
 	
@@ -1495,7 +1505,8 @@ body {
 		
 	}
 	&[data-context="menu"] {
-		#fe.bg(rgba(190,245,116,1));
+		//#fe.bg(rgba(190,245,116,1));
+		#fe.bg(#74BDB5);
 	}
 	&[data-context="menu2"] {
 		#fe.bg(rgba(245,248,250,1));
@@ -1528,15 +1539,24 @@ body {
 			list-style-type:none;
 			transition:all @trans-speed ease;
 			.mp0();
-			padding:10px;
 			
 			a {
+				display:block;
+				padding:10px;
 				#fe.color(#000000);
 				#fe.underline(none);
 			}
 			
 			&.active {
-				#fe.bg(#ffffff);
+				#fe.bg(rgba(245,248,250,1));
+				
+				a {
+					#fe.color(#000000);
+				}
+			}
+			
+			&:hover {
+				#fe.bg(rgba(245,248,250,1));
 				
 				a {
 					#fe.color(#000000);
@@ -1544,6 +1564,7 @@ body {
 			}
 		}
 	}
+<<<<<<< HEAD
 	
 }
 .input-block {
@@ -1630,4 +1651,6 @@ body {
 	bottom:10%;
 	right:0%;
 	#fe.w(100%);
+=======
+>>>>>>> 9cb50b39f7fae2ba219a44a1ba4c81743691646e
 }
