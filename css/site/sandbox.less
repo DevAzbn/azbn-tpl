@@ -29,12 +29,64 @@
 	&[class*='style-'] {
 		
 		&.style-b0w {
+			#fe.size(1.6em);
 			#fe.color(#000000);
 			#fe.bg(#ffffff);
 			
 			a {
 				#fe.color(#000000);
 			}
+			
+			p, center {
+				margin: 0 0 1.2em 0;
+			}
+			
+			img {
+				margin-top:2em;
+				margin-bottom:2em;
+			}
+			
+			ul, ol {
+				.mp0();
+				margin:1.5em 0;
+				
+				li {
+					.mp0();
+					margin: .5em 0 .5em 1em;
+					
+					a {
+						#fe.underline();
+						
+						&:hover {
+							#fe.underline(none);
+						}
+					}
+				}
+			}
+			
+			h1,h2,h3,h4,h5,h6 {
+				margin: 1em 0 1.5em;
+				#fe.bold();
+			}
+			h1 {
+				#fe.size(2em);
+			}
+			h2 {
+				#fe.size(1.5em);
+			}
+			h3 {
+				#fe.size(1.3em);
+			}
+			h4 {
+				#fe.size(1em);
+			}
+			h5 {
+				#fe.size(.9em);
+			}
+			h6 {
+				#fe.size(.75em);
+			}
+			
 		}
 		&.style-w0b {
 			#fe.color(#ffffff);

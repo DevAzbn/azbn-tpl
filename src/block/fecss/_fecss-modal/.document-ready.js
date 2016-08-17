@@ -46,27 +46,39 @@ $(document.body).on('click.fecss.modal.hide', '.fecss-modal .white-container .hi
 		
 		wc.removeClass('active').removeClass('in-bg');
 		
-		var _prev = $('#' + wc.data('fecss-modal-prev'));
-		if(_prev.length) {
+		var _prev_id = wc.data('fecss-modal-prev') || '';
+		
+		if(_prev_id != '') {
 			
-			var _prev_modal = _prev.closest('.fecss-modal');
-			
-			if(_prev_modal.hasClass('active')) {
-				if(!_prev_modal.hasClass('in-bg')) {
-					
+			var _prev = $('#' + wc.data('fecss-modal-prev'));
+			if(_prev.length) {// && (wc.data('fecss-modal-prev') != wc.attr('id'))
+				
+				var _prev_modal = _prev.closest('.fecss-modal');
+				
+				if(_prev_modal.hasClass('active')) {
+					if(!_prev_modal.hasClass('in-bg')) {
+						
+					} else {
+						modal.removeClass('active').removeClass('in-bg');
+						_prev_modal.removeClass('in-bg');
+					}
 				} else {
-					modal.removeClass('active').removeClass('in-bg');
-					_prev_modal.removeClass('in-bg');
+					modal.removeClass('active');
+					_prev_modal.addClass('active').removeClass('in-bg');
 				}
+				
+				_prev.removeClass('in-bg');
+				
 			} else {
+				
 				modal.removeClass('active');
-				_prev_modal.addClass('active').removeClass('in-bg');
+				
 			}
 			
-			_prev.removeClass('in-bg');
-			
 		} else {
+			
 			modal.removeClass('active');
+			
 		}
 		
 		wc.data('fecss-modal-prev', '').trigger('fecss.active.unset');

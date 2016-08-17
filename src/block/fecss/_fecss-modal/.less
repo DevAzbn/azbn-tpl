@@ -10,11 +10,22 @@
 	transition:all @trans-speed ease;
 	opacity:0;
 	
+	&:before {
+		content:'';
+		position:fixed;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		z-index:50;
+		#fe.bg(rgba(0, 0, 0, 0.5));
+	}
+	
 	&.active {
 		display:block;
 		z-index:200;
 		opacity:1;
-		#fe.bg(rgba(0, 0, 0, 0.5));
+		//#fe.bg(rgba(0, 0, 0, 0.5));
 		
 		&.in-bg {
 			z-index:190;
