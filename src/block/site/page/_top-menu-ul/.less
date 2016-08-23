@@ -1,0 +1,163 @@
+.top-menu-ul {
+	list-style-type:none;
+	display:inline-block;
+	word-spacing:-3px;
+	//border-bottom:2px #f5f8fa solid;
+	position:relative;
+	
+	@media @media-size-xs {
+		display:block;
+		#fe.bg(#ffffff);
+	}
+	
+	@media @media-size-sm {
+		display:block;
+		#fe.bg(#ffffff);
+	}
+	
+	@keyframes top-menu-ul-before {
+		from {
+			#fe.w(100%);
+		}
+		to {
+			#fe.w(0%);
+		}
+	}
+	@keyframes top-menu-ul-after {
+		from {
+			#fe.w(0%);
+		}
+		to {
+			#fe.w(100%);
+		}
+	}
+	
+	&:before {
+		content:'';
+		position:absolute;
+		right:0;
+		bottom:0px;
+		#fe.w(100%);
+		#fe.h(2px);
+		#fe.bg(#d1ff92);
+		#fe.z(0);
+		animation-fill-mode: forwards;
+		animation-name:top-menu-ul-before;
+		animation-delay:@trans-speed * 7;
+		animation-duration:@trans-speed * 3;
+		animation-timing-function: ease;
+	}
+	&:after {
+		content:'';
+		position:absolute;
+		left:0;
+		bottom:0px;
+		#fe.w(0%);
+		#fe.h(2px);
+		#fe.bg(#f5f8fa);
+		#fe.z(0);
+		animation-fill-mode: forwards;
+		animation-name:top-menu-ul-after;
+		animation-delay:@trans-speed * 7;
+		animation-duration:@trans-speed * 3;
+		animation-timing-function: ease;
+	}
+	
+	li {
+		display:inline-block;
+		.mp0();
+		
+		@media @media-size-xs {
+			display:block;
+		}
+		
+		@media @media-size-sm {
+			display:block;
+		}
+		
+		&:hover {
+			#fe.bg(#bef574);
+			#fe.color(#ffffff);
+			
+			a:hover {
+				padding-left:1em;
+				border-color:#932ea8;
+				
+				@media @media-size-xs {
+					padding-left:.5em;
+				}
+				
+				@media @media-size-sm {
+					padding-left:.5em;
+				}
+			}
+		}
+		
+		&:first-child {
+			#fe.bg(#932ea8);
+			
+			&.active {
+				#fe.bg(#932ea8);
+			}
+			
+			a {
+				padding-left:0em;
+				#fe.color(#ffffff);
+				
+				@media @media-size-xs {
+					padding-left:.5em;
+				}
+				
+				@media @media-size-sm {
+					padding-left:.5em;
+				}
+				
+				@media @media-size-md {
+					padding-left:.5em;
+				}
+				
+				@media @media-size-lg {
+					padding-left:.5em;
+				}
+			}
+		}
+		
+		&.active {
+			#fe.bg(#7ba83f);
+			
+			a {
+				padding:1em;
+				border-color:#932ea8;
+				#fe.color(#ffffff);
+				
+				@media @media-size-xs {
+					padding-left:.5em;
+				}
+				
+				@media @media-size-sm {
+					padding-left:.5em;
+				}
+			}
+		}
+		
+		a {
+			display:inline-block;
+			padding:1em 1em 1em 0.5em;
+			transition:all @trans-speed ease-out;
+			border-bottom:2px transparent solid;
+			border-color:transparent;
+			word-spacing:2px;
+			#fe.size(2em);
+			#fe.color(#000000);
+			
+			@media @media-size-xs {
+				display:block;
+			}
+			
+			@media @media-size-sm {
+				display:block;
+			}
+			
+		}
+	}
+}
