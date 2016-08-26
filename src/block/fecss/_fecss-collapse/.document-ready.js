@@ -6,6 +6,7 @@ $(document.body).on('click.fecss.fecss-collapse.collapser', '.fecss-collapse .co
 	
 	var btn = $(this);
 	var collapse = btn.closest('.fecss-collapse');
+	//$('.fecss-collapse.active').removeClass('active');
 	collapse.toggleClass('active');
 	
 });
