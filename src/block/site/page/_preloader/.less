@@ -4,12 +4,16 @@
 	margin:0 auto;
 	border-radius:50%;
 	border:1px #bef574 solid;
+	cursor:pointer;
 	#fe.bg(transparent);
 	#fe.w(128px);
 	#fe.h(128px);
 	#fe.brep();
 	#fe.bpos();
-	#site.bi('page/_preloader/preloader-logo.png');
+	//#site.bi('page/_preloader/preloader-logo.png');
+	#fe.color(#7ba83f);
+	#fe.size(2.5em);
+	#fe.bold();
 	
 	@keyframes preloader-before-rotate {
 		from {
@@ -36,5 +40,9 @@
 		animation-timing-function:linear;
 		#fe.w(128px);
 		#fe.h(128px);
+	}
+	
+	&:active {
+		outline:none;
 	}
 }

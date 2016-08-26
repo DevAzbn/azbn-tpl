@@ -1,5 +1,49 @@
+$(document.body).on('submit.site', 'form', {}, function(event){
+	
+	var form = $(this);
+	var ok = form.attr('data-input-status') || '';
+	
+	if(ok == 'ok' || ok == '1') {
+		
+	} else {
+		event.preventDefault();
+	}
+	
+});
 
-$(document.body).on('keyup.site blur.site focus.site', '.input-block input, .input-block textarea', {}, function(event){
+
+$(document.body).on('site.form.required.check', 'form', {}, function(event){
+	event.preventDefault();
+	
+	var form = $(this);
+	var required_ok = 0;
+	
+	form.find('.input-block[data-required]').each(function(index){
+		
+		var input = $(this);
+		var ok = input.attr('data-input-status') || '';
+		
+		if(ok == 'ok' || ok == '1') {
+			required_ok = required_ok + 1;
+		} else {
+			
+		}
+		
+	});
+	
+	if(required_ok == form.find('.input-block[data-required]').length) {
+		form.attr('data-input-status', 'ok');
+	} else {
+		form.attr('data-input-status', '');
+	}
+	
+});
+
+
+
+
+
+$(document.body).on('keyup.site blur.site focus.site', '.input-block input:not([type="search"]), .input-block textarea', {}, function(event){
 	event.preventDefault();
 	
 	var input = $(this);
@@ -10,7 +54,29 @@ $(document.body).on('keyup.site blur.site focus.site', '.input-block input, .inp
 	} else {
 		input.closest('.input-block').attr('data-input-status', '');
 	}
+	
+	input.closest('form').trigger('site.form.required.check');
 });
+
+
+$(document.body).on('keyup.site blur.site focus.site', '.input-block input[type="search"]', {}, function(event){
+	event.preventDefault();
+	
+	var input = $(this);
+	var val = $(this).val();
+	
+	if(val.length > 2 && input.closest('.input-block').attr('data-required') == 'search') {
+		input.closest('.input-block').attr('data-input-status', 'ok');
+		input.closest('.input-block').next('.submit-block').attr('data-input-status', 'ok');
+	} else {
+		input.closest('.input-block').attr('data-input-status', '');
+		input.closest('.input-block').next('.submit-block').attr('data-input-status', '');
+	}
+	
+	input.closest('form').trigger('site.form.required.check');
+});
+
+
 
 $(document.body).on('change.site blur.site', '.input-block select', {}, function(event){
 	event.preventDefault();
@@ -23,6 +89,8 @@ $(document.body).on('change.site blur.site', '.input-block select', {}, function
 	} else {
 		input.closest('.input-block').attr('data-input-status', '');
 	}
+	
+	input.closest('form').trigger('site.form.required.check');
 });
 
 $(function(){

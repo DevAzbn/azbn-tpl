@@ -44,13 +44,20 @@
 		#fe.size(.9em);
 		#fe.italic();
 		#fe.color(#999999);
+		
+		@media @media-size-xs {
+			float:left;
+			margin:0.3em 0;
+			opacity:0.4;
+		}
+		
 	}
 	
 	input, textarea, select {
 		transition:all @trans-speed / 1.25 ease;
 		display:block;
 		border-radius:0px;
-		border:1px green solid;
+		border:1px #7ba83f solid;
 		border-bottom-width:3px;
 		//border-right-width:2px;
 		padding: .3em .5em;
@@ -69,6 +76,19 @@
 			&:focus {
 				border:1px transparent solid;
 				#fe.bg(rgba(190,245,116,0.15));
+			}
+			
+			.ios & {
+				transform: scale(0.67);
+				border:2px #7ba83f solid;
+				border-bottom-width:2px;
+				vertical-align:middle;
+				#fe.bg(transparent);
+				#fe.color(#7ba83f);
+				
+				&:focus, &:active {
+					border-color:#932ea8;
+				}
 			}
 		}
 		
