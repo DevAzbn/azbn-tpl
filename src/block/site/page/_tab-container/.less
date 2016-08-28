@@ -1,16 +1,33 @@
 .tab-container {
+	margin:3em 0;
+	
 	.tab-btns {
 		list-style-type:none;
+		display:inline-block;
+		border-bottom:1px #f5f8fa solid;
+		word-spacing:-3px;
 		
 		li {
 			display:inline-block;
+			word-spacing:1px;
 			#fe.w(auto);
-		}
-		
-		.tab-btn {
 			
 			&.active {
 				
+			}
+		}
+		
+		.tab-btn {
+			display:inline-block;
+			padding:0.75em 2em;
+			border-radius:0.75em 0.75em 0 0;
+			#fe.size(1.5em);
+			#fe.color(#000000);
+			#fe.bg(rgba(245,248,250,0.2));
+			
+			&.active {
+				#fe.bg(#f5f8fa);
+				#fe.color(#000000);
 			}
 		}
 	}
@@ -20,6 +37,8 @@
 			
 			&.active {
 				display:block;
+				padding:2em 3em;
+				#fe.bg(#f5f8fa);
 			}
 		}
 	}
