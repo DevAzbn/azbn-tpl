@@ -14,7 +14,8 @@ $(document.body).on('click.site', '.tab-container .tab-btns .tab-btn', {}, funct
 	
 });
 
-$(function(){
+$(document.body).on('site.tab-container.init', '.tab-container', {}, function(event){
+	event.preventDefault();
 	
 	var tc = $('.tab-container');
 	var d_ti = tc.attr('data-tab-default');
@@ -24,5 +25,11 @@ $(function(){
 	}
 	
 	tc.find('.tab-btns .tab-btn[data-tab-id="' + d_ti + '"]').trigger('click');
+	
+});
+
+$(function(){
+	
+	$('.tab-container').trigger('site.tab-container.init');
 	
 });
