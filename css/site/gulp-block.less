@@ -1089,6 +1089,9 @@
 	}
 	*/
 }
+.news-slider {
+	margin:3em 0;
+}
 body {
 	
 	&[class*='theme-'], *[class*='theme-'] {
@@ -1191,31 +1194,6 @@ body {
 	}
 	
 }
-.b-item {
-	
-	&, &[data-context="container"] {
-		
-	}
-	&[data-context="design"] {
-		
-	}
-	&[data-context="title"] {
-		
-	}
-	&[data-context="text"] {
-		
-	}
-	&[data-context="image"] {
-		
-	}
-	&[data-context="menu"] {
-		//#fe.bg(rgba(190,245,116,1));
-		#fe.bg(#74BDB5);
-	}
-	&[data-context="menu2"] {
-		#fe.bg(rgba(245,248,250,1));
-	}
-	
 /*
 
 фисташковый 190,245,116 #bef574
@@ -1235,39 +1213,10 @@ body {
 приятный серый 245,248,250 #f5f8fa
 
 */
-	
-	.b-menu-1, .b-menu-2 {
-		.mp0();
-		
-		li {
-			list-style-type:none;
-			transition:all @trans-speed ease;
-			.mp0();
-			
-			a {
-				display:block;
-				padding:10px;
-				#fe.color(#000000);
-				#fe.underline(none);
-			}
-			
-			&.active {
-				#fe.bg(rgba(245,248,250,1));
-				
-				a {
-					#fe.color(#000000);
-				}
-			}
-			
-			&:hover {
-				#fe.bg(rgba(245,248,250,1));
-				
-				a {
-					#fe.color(#000000);
-				}
-			}
-		}
-	}
+.block-title {
+	padding:0 0 0.75em;
+	#fe.size(2em);
+	#fe.underline();
 }
 .bottom-copy-ul {
 	list-style-type:none;
@@ -1796,6 +1745,32 @@ body {
 	}
 	
 }
+.tab-container {
+	.tab-btns {
+		list-style-type:none;
+		
+		li {
+			display:inline-block;
+			#fe.w(auto);
+		}
+		
+		.tab-btn {
+			
+			&.active {
+				
+			}
+		}
+	}
+	.tab-items {
+		.tab-item {
+			display:none;
+			
+			&.active {
+				display:block;
+			}
+		}
+	}
+}
 .top-menu-ul {
 	list-style-type:none;
 	display:inline-block;
@@ -2068,6 +2043,65 @@ body {
 				display:block;
 			}
 			
+		}
+	}
+}
+.gallery {
+	margin:3em 0;
+}
+.gallery-item {
+	position:relative;
+	#fe.z(2);
+	
+	&:hover {
+		outline:1px rgba(123,168,63,0.85) solid;
+		#fe.z(3);
+	}
+	
+	&:hover, .mobile &, .tablet & {
+		.info {
+			opacity:1;
+		}
+	}
+	
+	.screen {
+		min-height:240px;
+		
+		@media @media-size-xs {
+			min-height:320px;
+		}
+		
+		@media @media-size-sm {
+			min-height:320px;
+		}
+		
+		@media @media-size-md {
+			
+		}
+		
+		@media @media-size-lg {
+			
+		}
+	}
+	.info {
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		transition:all @trans-speed / 2 ease;
+		opacity:0;
+		text-align:center;
+		padding:1.5em 1em;
+		#fe.bg(rgba(123,168,63,0.85));
+		
+		.title {
+			#fe.color(#ffffff);
+			#fe.size(1.75em);
+			#fe.uppercase();
+			
+			&.small {
+				#fe.size(1.4em);
+			}
 		}
 	}
 }

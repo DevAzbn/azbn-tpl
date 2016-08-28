@@ -46,6 +46,41 @@
 				margin-bottom:2em;
 			}
 			
+			iframe {
+				width:100%;
+				max-width:100%;
+				margin:2em auto;
+				border:none;
+				
+				@media @media-size-xs {
+					min-height:180px;
+					
+					.landscape & {
+						min-height:240px;
+					}
+				}
+				
+				@media @media-size-sm {
+					min-height:240px;
+					
+					.tablet & {
+						min-height:320px;
+					}
+				}
+				
+				@media @media-size-md {
+					min-height:360px;
+					
+					.tablet & {
+						min-height:420px;
+					}
+				}
+				
+				@media @media-size-lg {
+					min-height:480px;
+				}
+			}
+			
 			ul, ol {
 				.mp0();
 				margin:1.5em 0;
