@@ -45,7 +45,7 @@ $(document.body).on('site.form.required.check', 'form', {}, function(event){
 
 
 
-$(document.body).on('keyup.site blur.site focus.site', '.input-block input:not([type="search"]), .input-block textarea', {}, function(event){
+$(document.body).on('keyup.site blur.site focus.site', '.input-block[data-required="text"] input:not([type="search"]), .input-block[data-required="text"] textarea', {}, function(event){
 	event.preventDefault();
 	
 	var input = $(this);
@@ -59,6 +59,42 @@ $(document.body).on('keyup.site blur.site focus.site', '.input-block input:not([
 	
 	input.closest('form').trigger('site.form.required.check');
 });
+
+$(document.body).on('keyup.site blur.site focus.site', '.input-block[data-required="email"] input', {}, function(event){
+	event.preventDefault();
+	
+	var input = $(this);
+	var val = $(this).val();
+	
+	var re1 = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+	
+	//if(val != '' && input.closest('.input-block').attr('data-required') == 'email' && val.indexOf('@') > 0) {
+	if(val != '' && input.closest('.input-block').attr('data-required') == 'email' && (re1.test(val))) {
+		input.closest('.input-block').attr('data-input-status', 'ok');
+	} else {
+		input.closest('.input-block').attr('data-input-status', '');
+	}
+	
+	input.closest('form').trigger('site.form.required.check');
+});
+
+$(document.body).on('keyup.site blur.site focus.site', '.input-block[data-required="check-pass"] input', {}, function(event){
+	event.preventDefault();
+	
+	var input = $(this);
+	var val = $(this).val();
+	
+	var val_ = $('.input-block input[name="pass"]').val();
+	
+	if(val != '' && val_ != '' && input.closest('.input-block').attr('data-required') == 'check-pass' && val_ == val) {
+		input.closest('.input-block').attr('data-input-status', 'ok');
+	} else {
+		input.closest('.input-block').attr('data-input-status', '');
+	}
+	
+	input.closest('form').trigger('site.form.required.check');
+});
+
 
 
 $(document.body).on('keyup.site blur.site focus.site', '.input-block input[type="search"]', {}, function(event){
