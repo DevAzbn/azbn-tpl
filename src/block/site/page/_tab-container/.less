@@ -7,6 +7,10 @@
 		border-bottom:1px #f5f8fa solid;
 		word-spacing:-3px;
 		
+		@media @media-size-xs {
+			border-bottom:none;
+		}
+		
 		li {
 			display:inline-block;
 			word-spacing:1px;
@@ -28,18 +32,33 @@
 			&.active {
 				#fe.bg(#f5f8fa);
 				#fe.color(#000000);
+				#fe.bold();
+			}
+			
+			@media @media-size-xs {
+				border-radius:0;
 			}
 		}
 	}
 	.tab-items {
 		.tab-item {
 			display:none;
+			padding:2em 3em 1em;
+			transition:all @trans-speed ease;
+			
+			@media @media-size-xs {
+				padding:1.5em 0 1em;
+			}
 			
 			&.active {
 				display:block;
-				padding:2em 3em;
 				#fe.bg(#f5f8fa);
+				
+				@media @media-size-xs {
+					#fe.bg(transparent);
+				}
 			}
+			
 		}
 	}
 }

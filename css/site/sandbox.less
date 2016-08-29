@@ -31,7 +31,7 @@
 		&.style-b0w {
 			#fe.size(1.6em);
 			#fe.color(#000000);
-			#fe.bg(#ffffff);
+			//#fe.bg(#ffffff);
 			
 			a {
 				#fe.color(#000000);
@@ -44,6 +44,73 @@
 			img {
 				margin-top:2em;
 				margin-bottom:2em;
+			}
+			
+			.table-responsive {
+				min-height:.01%;
+				overflow-x:auto;
+				margin-top:2em;
+				margin-bottom:2em;
+				
+				@media @media-size-xs {
+					overflow-y:hidden;
+					max-width:100%;
+				}
+				
+				@media @media-size-sm {
+					overflow-y:hidden;
+					max-width:100%;
+				}
+				
+				@media @media-size-md {
+					overflow-y:hidden;
+					max-width:100%;
+				}
+				
+				table {
+					margin-top:0;
+					margin-bottom:5px;
+				}
+			}
+			
+			table {
+				border-collapse:collapse;
+				border-spacing:0;
+				margin-top:2em;
+				margin-bottom:2em;
+				max-width:100%;
+				#fe.w(100%);
+				
+				tr {
+					
+				}
+				
+				thead {
+					
+				}
+				
+				tfoot {
+					
+				}
+				
+				tbody {
+					tr {
+						&:nth-child(even) {
+							
+						}
+						&:nth-child(odd) {
+							#fe.bg(#f6f6f6);
+						}
+					}
+				}
+				
+				td, th {
+					text-align:center;
+					padding:0.3em 0.4em;
+					white-space:nowrap;
+					border:1px solid #e1e1e1;
+				}
+				
 			}
 			
 			iframe {
@@ -87,7 +154,7 @@
 				
 				li {
 					.mp0();
-					margin: .5em 0 .5em 1em;
+					margin: .5em 0 .5em 1.2em;
 					
 					a {
 						#fe.underline();
@@ -102,6 +169,10 @@
 			h1,h2,h3,h4,h5,h6 {
 				margin: 1em 0 1.5em;
 				#fe.bold();
+				
+				.desktop & a:hover, {
+					#fe.underline();
+				}
 			}
 			h1 {
 				#fe.size(2em);
@@ -134,4 +205,9 @@
 		
 	}
 	
+}
+
+.table-responsive {
+	max-width:100%;
+	#fe.w(100%);
 }

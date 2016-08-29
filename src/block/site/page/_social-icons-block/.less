@@ -1,0 +1,60 @@
+.social-icons-block {
+	display:block;
+	
+	ul {
+		display:block;
+		list-style-type:none !important;
+		
+		@media @media-size-xs {
+			text-align:center;
+		}
+		
+		li {
+			display:inline-block !important;
+			margin:0 1em 0 0 !important;
+			
+			@media @media-size-xs {
+				margin:0 0.5em !important;
+			}
+			
+			a {
+				display:inline-block;
+				border-radius:4px;
+				transition:all @trans-speed / 1.5 ease;
+				#fe.w(48px);
+				#fe.h(48px);
+				#fe.bpos();
+				#fe.brep();
+				#fe.bsize(80%);
+				#fe.bg(transparent);
+				
+				&:hover {
+					#fe.bg(rgba(192,192,192,0.67));
+				}
+				
+				//https://www.iconfinder.com/iconsets/social-glyph
+				//https://www.iconfinder.com/iconsets/rcons-social
+				
+				&[data-icon-type="email"] {
+					#site.bi('page/_social-icons-block/email.svg');
+				}
+				&[data-icon-type="phone"] {
+					#site.bi('page/_social-icons-block/phone.svg');
+				}
+				&[data-icon-type="vk"] {
+					#site.bi('page/_social-icons-block/vk.svg');
+				}
+				&[data-icon-type="twitter"] {
+					#site.bi('page/_social-icons-block/twitter.svg');
+				}
+				&[data-icon-type="github"] {
+					#site.bi('page/_social-icons-block/github.svg');
+				}
+				&[data-icon-type="skype"] {
+					#site.bi('page/_social-icons-block/skype.svg');
+				}
+				
+			}
+		}
+	}
+}

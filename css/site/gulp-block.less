@@ -595,7 +595,7 @@
 					display:block;
 					width: 100%;
 					opacity:1;
-					box-shadow: 0px 15px 15px 15px rgba(0,0,0,0.55);
+					box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.25);
 					#fe.z(10);
 				}
 			}
@@ -1446,8 +1446,9 @@ body {
 		#fe.color(#999999);
 		
 		@media @media-size-xs {
-			float:left;
-			margin:0.3em 0;
+			float:inherit;
+			display:block;
+			margin:0 0 0.3em;
 			opacity:0.4;
 		}
 		
@@ -1663,6 +1664,7 @@ body {
 	#fe.color(#7ba83f);
 	#fe.size(2.5em);
 	#fe.bold();
+	#fe.z(1);
 	
 	@keyframes preloader-before-rotate {
 		from {
@@ -1677,7 +1679,7 @@ body {
 	&:before {
 		content:'';
 		position:absolute;
-		border-top:2px #7ba83f solid;
+		border-top:2px #932ea8 solid;
 		border-radius:100%;
 		left:-1px;
 		top:-1px;
@@ -1691,8 +1693,88 @@ body {
 		#fe.h(128px);
 	}
 	
+	/*
+	&:after {
+		content:'';
+		position:absolute;
+		border-radius:50%;
+		left:-1px;
+		top:-1px;
+		transform-origin: center;
+		animation-name: preloader-before-rotate;
+		animation-duration: @trans-speed * 8;
+		animation-fill-mode: forward;
+		animation-iteration-count: infinite;
+		animation-timing-function:linear;
+		#fe.w(128px);
+		#fe.h(128px);
+		#fe.z(500);
+		background:linear-gradient(to bottom, rgba(123,168,63,0.21) 0%, transparent 5%, transparent 95%, rgba(147,46,168,0.21) 100%);
+	}
+	*/
+	
 	&:active {
 		outline:none;
+	}
+}
+.social-icons-block {
+	display:block;
+	
+	ul {
+		display:block;
+		list-style-type:none !important;
+		
+		@media @media-size-xs {
+			text-align:center;
+		}
+		
+		li {
+			display:inline-block !important;
+			margin:0 1em 0 0 !important;
+			
+			@media @media-size-xs {
+				margin:0 0.5em !important;
+			}
+			
+			a {
+				display:inline-block;
+				border-radius:4px;
+				transition:all @trans-speed / 1.5 ease;
+				#fe.w(48px);
+				#fe.h(48px);
+				#fe.bpos();
+				#fe.brep();
+				#fe.bsize(80%);
+				#fe.bg(transparent);
+				
+				&:hover {
+					#fe.bg(rgba(192,192,192,0.67));
+				}
+				
+				//https://www.iconfinder.com/iconsets/social-glyph
+				//https://www.iconfinder.com/iconsets/rcons-social
+				
+				&[data-icon-type="email"] {
+					#site.bi('page/_social-icons-block/email.svg');
+				}
+				&[data-icon-type="phone"] {
+					#site.bi('page/_social-icons-block/phone.svg');
+				}
+				&[data-icon-type="vk"] {
+					#site.bi('page/_social-icons-block/vk.svg');
+				}
+				&[data-icon-type="twitter"] {
+					#site.bi('page/_social-icons-block/twitter.svg');
+				}
+				&[data-icon-type="github"] {
+					#site.bi('page/_social-icons-block/github.svg');
+				}
+				&[data-icon-type="skype"] {
+					#site.bi('page/_social-icons-block/skype.svg');
+				}
+				
+			}
+		}
 	}
 }
 .submit-block {
@@ -1755,6 +1837,10 @@ body {
 		border-bottom:1px #f5f8fa solid;
 		word-spacing:-3px;
 		
+		@media @media-size-xs {
+			border-bottom:none;
+		}
+		
 		li {
 			display:inline-block;
 			word-spacing:1px;
@@ -1776,18 +1862,33 @@ body {
 			&.active {
 				#fe.bg(#f5f8fa);
 				#fe.color(#000000);
+				#fe.bold();
+			}
+			
+			@media @media-size-xs {
+				border-radius:0;
 			}
 		}
 	}
 	.tab-items {
 		.tab-item {
 			display:none;
+			padding:2em 3em 1em;
+			transition:all @trans-speed ease;
+			
+			@media @media-size-xs {
+				padding:1.5em 0 1em;
+			}
 			
 			&.active {
 				display:block;
-				padding:2em 3em;
 				#fe.bg(#f5f8fa);
+				
+				@media @media-size-xs {
+					#fe.bg(transparent);
+				}
 			}
+			
 		}
 	}
 }
@@ -2074,7 +2175,7 @@ body {
 	#fe.z(2);
 	
 	&:hover {
-		outline:1px rgba(123,168,63,0.85) solid;
+		outline:1px rgba(123,168,63,0.67) solid;
 		#fe.z(3);
 	}
 	
@@ -2112,7 +2213,7 @@ body {
 		opacity:0;
 		text-align:center;
 		padding:1.5em 1em;
-		#fe.bg(rgba(123,168,63,0.85));
+		#fe.bg(rgba(123,168,63,0.9));
 		
 		.title {
 			#fe.color(#ffffff);
