@@ -32,8 +32,10 @@ $(document.body).on('site.form.required.check', 'form', {}, function(event){
 	});
 	
 	if(required_ok == form.find('.input-block[data-required]').length) {
+		form.find('.submit-block').attr('data-input-status', 'ok');
 		form.attr('data-input-status', 'ok');
 	} else {
+		form.find('.submit-block').attr('data-input-status', '');
 		form.attr('data-input-status', '');
 	}
 	
