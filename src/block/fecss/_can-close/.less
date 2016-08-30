@@ -18,16 +18,36 @@
 	
 	.close-btn {
 		position:absolute;
-		right:1em;
-		top:1em;
+		right:.75em;
+		top:.75em;
 		width:1em;
 		height:1em;
 		background-size:cover;
 		#fe.brep();
 		#fe.bpos();
-		#fe.bi('.can-close/close-btn.png');
+		#site.bi('fecss/.can-close/close-btn.png');
 	}
 	
+	&[data-state] {
+		padding:1em;
+		
+		&[data-state="alert"] {
+			border:1px rgba(255,0,0,0.3) solid;
+			#fe.bg(rgba(255,0,0,0.15));
+		}
+		&[data-state="warning"] {
+			border:1px rgba(255,255,0,0.3) solid;
+			#fe.bg(rgba(255,255,0,0.15));
+		}
+		&[data-state="success"] {
+			border:1px rgba(0,255,0,0.3) solid;
+			#fe.bg(rgba(0,255,0,0.15));
+		}
+		&[data-state="info"] {
+			border:1px rgba(0,0,255,0.21) solid;
+			#fe.bg(rgba(0,0,255,0.05));
+		}
+	}
 	
 	/*
 	&.mod {

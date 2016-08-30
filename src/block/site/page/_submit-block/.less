@@ -14,6 +14,23 @@
 		#fe.size(1.5em);
 		#fe.italic();
 		#fe.color(#999999);
+		
+		
+		.mobile &, .tablet & {
+			display:none;
+		}
+		
+		@media @media-size-xs {
+			.desktop & {
+				display:none;
+			}
+		}
+		@media @media-size-sm {
+			.desktop & {
+				display:none;
+			}
+		}
+		
 	}
 	
 	input[type="submit"] {
