@@ -1523,6 +1523,48 @@ body {
 	}
 	
 }
+.list-item {
+	margin-top:2em;
+	margin-bottom:4em;
+	
+	.path {
+		#fe.size(.8em);
+		#fe.color(#3e3e3e);
+		
+		a {
+			color:#aeaeae !important;
+			
+			&:hover {
+				#fe.underline();
+			}
+		}
+	}
+	
+	.title {
+		margin-top:-1.25em;
+	}
+	
+	.preview {
+		padding-left:2em;
+		margin-top:-.75em;
+		
+		@media @media-size-xs {
+			padding-left:0em;
+		}
+		@media @media-size-sm {
+			padding-left:1em;
+		}
+		@media @media-size-md {
+			
+		}
+		@media @media-size-lg {
+			
+		}
+		
+		#fe.size(.75em);
+	}
+	
+}
 .menu-btn-block {
 	position:fixed;
 	bottom:5%;
