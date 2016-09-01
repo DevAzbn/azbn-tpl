@@ -1158,6 +1158,53 @@ body {
 	}
 	
 }
+.big-accordion {
+	
+	.surface {
+		border-left:2px transparent solid;
+		padding-left:1em;
+		
+		&[data-state="active"] {
+			border-left:2px #f5f8fa solid;
+		}
+		
+		.surface {
+			margin-left:2em;
+			
+			@media @media-size-xs {
+				margin-left:0em;
+			}
+			@media @media-size-sm {
+				margin-left:1em;
+			}
+			@media @media-size-md {
+				
+			}
+			@media @media-size-lg {
+				
+			}
+		}
+		
+		.surface-btn {
+			
+		}
+		
+		.surface-content {
+			
+		}
+		
+	}
+	
+	& > .surface {
+		border-left:none;
+		padding-left:0em;
+		
+		&[data-state="active"] {
+			border-left:none;
+		}
+	}
+	
+}
 /*
 
 фисташковый 190,245,116 #bef574
