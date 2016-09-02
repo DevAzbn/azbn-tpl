@@ -4,7 +4,7 @@ $(document.body).on('fecss.modal.show.after', null, {}, function(event, modal, w
 	
 	console.log('body trigger:fecss.modal.show.after');
 	
-	
+	$(window).trigger('resize');
 	
 });
 
@@ -13,7 +13,7 @@ $(document.body).on('fecss.modal.hide.after', null, {}, function(event, modal, w
 	
 	console.log('body trigger:fecss.modal.hide.after');
 	
-	
+	$(window).trigger('resize');
 	
 });
 
