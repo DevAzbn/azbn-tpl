@@ -36,7 +36,6 @@
 		border-radius:0px;
 		border:1px transparent solid;
 		cursor:pointer;
-		#fe.size(1.5em);
 		#fe.bold();
 		#fe.uppercase();
 		
@@ -58,6 +57,27 @@
 			#fe.color(#ffffff);
 			#fe.bg(#7ba83f);
 		}
+		
+		&[data-style="alert"] {
+			#fe.color(#000000);
+			#fe.bg(rgba(255,0,0,0.15));
+		}
+		
+		&[data-style="warning"] {
+			#fe.color(#000000);
+			#fe.bg(rgba(255,255,0,0.15));
+		}
+		
+		&[data-style="success"] {
+			#fe.color(#000000);
+			#fe.bg(rgba(0,255,0,0.15));
+		}
+		
+		&, &[data-style="info"] {
+			#fe.color(#000000);
+			#fe.bg(rgba(0,0,255,0.05));
+		}
+		
 	}
 	
 }
