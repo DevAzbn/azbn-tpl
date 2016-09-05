@@ -1,2 +1,2 @@
-$(function(){console.log("body trigger:changeClass action:"+event_action)});
+$(function(){});
 $(".line-gallery").each(function(a){var s=$(this),t=$(document.body),d=3;t.hasClass("window-width-xs")?d=s.attr("data-xs-vis")||1:t.hasClass("window-width-sm")?d=s.attr("data-sm-vis")||2:t.hasClass("window-width-md")?d=s.attr("data-md-vis")||3:t.hasClass("window-width-lg")&&(d=s.attr("data-lg-vis")||3);for(var i=s.find(".img-block .item"),h=d;h<i.length;h++)i.eq(h).hide();for(var h=0;h<d;h++)i.eq(h).is(":hidden")&&i.eq(h).fadeIn("fast")});

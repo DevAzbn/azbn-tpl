@@ -9,10 +9,6 @@ $(document.body).on('fecss.init',		null, {}, function(event) {
 	var t = new Date().getTime();
 	$(document.body).attr('data-created_at', t);
 	
-	$(document.body).trigger('fecss.nedb.visit.insert', [{
-		href : window.location.href,
-		referrer : document.referrer,
-	}]);
 });
 
 $(document.body).on('fecss.window.unload',		null, {}, function(event, _event) {
