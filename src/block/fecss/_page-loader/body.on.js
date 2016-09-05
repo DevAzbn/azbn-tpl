@@ -3,6 +3,7 @@ $(window).on('load', function(event){
 	
 	console.log('window trigger:load');
 	
+	$('body').removeClass('overflow-hidden');
 	$('.page-loader').removeClass('active').empty().remove();
 	
 	$('.page-container').addClass('smooth-animation');

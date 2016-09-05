@@ -3,6 +3,7 @@ $(document.body).on('click.fecss.page-loader.close-loader', '.page-loader .close
 	
 	console.log('body trigger:click.fecss.page-loader.close-loader');
 	
+	$('body').removeClass('overflow-hidden');
 	$('.page-loader').removeClass('active').empty().remove();
 	
 });

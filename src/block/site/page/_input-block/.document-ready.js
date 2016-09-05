@@ -134,5 +134,6 @@ $(document.body).on('change.site blur.site', '.input-block select', {}, function
 $(function(){
 	
 	$('.input-block input, .input-block textarea, .input-block select').trigger('blur.site');
+	$('form').trigger('site.form.required.check');
 	
 })
