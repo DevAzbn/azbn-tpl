@@ -6,8 +6,8 @@ $(window).on('load', function(event){
 	$('body').removeClass('overflow-hidden');
 	$('.page-loader').removeClass('active');//.empty().remove();
 	
-	$('.page-container').addClass('smooth-animation');
-	$('.page-container .fluid-block').addClass('smooth-item');
-	$('.smooth-animation').attr('data-state', 'active');
+	//$('.page-container').addClass('smooth-animation');
+	//$('.page-container .fluid-block').addClass('smooth-item');
+	//$('.smooth-animation').attr('data-state', 'active');
 	
 });
