@@ -1,7 +1,7 @@
 window.onerror
 
 
-[snp tpl="src/_/concat.plugin.js" ]
+[[azbntple  tpl="/src/_/concat.plugin.js" ]]
 	.scroll-container
 	.tooltip
 	screenJS
@@ -10,7 +10,7 @@ window.onerror
 $(document).ready // $(function(){})
 	
 	
-	[snp tpl="src/_/concat.body.on.js" ]
+	[[azbntple  tpl="/src/_/concat.body.on.js" ]]
 		$(document.body).on('fecss.default')
 		$(document.body).on('fecss.init')
 		$(document.body).on('fecss.window.unload')
@@ -27,7 +27,7 @@ $(document).ready // $(function(){})
 		$(document.body).on('fecss.active.unset')
 	
 	
-	[snp tpl="src/_/concat.document-ready.js" ]
+	[[azbntple  tpl="/src/_/concat.document-ready.js" ]]
 		$(document.body).bind('keydown')
 		$(document.body).on('click.fecss.fecss-collapse.collapser')
 		$(document.body).on('click.fecss.go-to-top')
@@ -83,10 +83,10 @@ $(document).ready // $(function(){})
 		$('.go-to-top')
 	
 	$('body').on('changeClass')
-		[snp tpl="src/_/concat.body.changeClass.js" ]
+		[[azbntple  tpl="/src/_/concat.body.changeClass.js" ]]
 			$('.line-gallery')
 	
-	[snp tpl="src/_/concat.changeClass.js" ]
+	[[azbntple  tpl="/src/_/concat.changeClass.js" ]]
 	
 	
 	window.onbeforeunload

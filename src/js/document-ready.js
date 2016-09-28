@@ -7,7 +7,7 @@ window.onerror = function(error, url, lineNumber, column, errorObj) {
 }
 
 
-[snp tpl="src/_/concat.plugin.js" ]
+[[azbntple tpl="/src/_/concat.plugin.js" ]]
 
 
 $(function() {
@@ -15,7 +15,7 @@ $(function() {
 	/*
 	Создание триггеров на элементы, в основном, на body
 	*/
-	[snp tpl="src/_/concat.body.on.js" ]
+	[[azbntple tpl="/src/_/concat.body.on.js" ]]
 	
 	
 	/*
@@ -24,27 +24,27 @@ $(function() {
 	$(document.body).on('changeClass', null, {} ,function(event, event_action){
 		// event_action = add || remove || toggle
 		
-		[snp tpl="src/_/concat.body.changeClass.js" ]
+		[[azbntple tpl="/src/_/concat.body.changeClass.js" ]]
 	});
 	
 	
 	/*
 	События смены класса у любого элемента
 	*/
-	[snp tpl="src/_/concat.changeClass.js" ]
+	[[azbntple tpl="/src/_/concat.changeClass.js" ]]
 	
 	
 	/*
 	Основная логика сайта
 	*/
-	[snp tpl="src/_/concat.document-ready.js" ]
+	[[azbntple tpl="/src/_/concat.document-ready.js" ]]
 	
 	
 	/*
 	Событие смены размера экрана, генерация этого события
 	*/
 	$(window).on('resize',function(event){
-		[snp tpl="src/_/concat.window-resize.js" ]
+		[[azbntple tpl="/src/_/concat.window-resize.js" ]]
 	}).trigger('resize');
 	
 	
@@ -52,7 +52,7 @@ $(function() {
 	Событие скроллинга экрана, генерация этого события
 	*/
 	$(window).on('scroll',function(event){
-		[snp tpl="src/_/concat.window-scroll.js" ]
+		[[azbntple tpl="/src/_/concat.window-scroll.js" ]]
 	}).trigger('scroll');
 	
 	
