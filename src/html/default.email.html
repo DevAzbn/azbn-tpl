@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js" >
+<head>
+	
+	<title>email</title>
+	<link href="./../../css/email.css" rel="stylesheet">
+	
+</head>
+<body class="fecss full-height is-mainpage touchswipe theme-b0w overflow-hidden " data-fecss-jssearch="" data-fecss-modal="no-modal" data-context="container" >
+	
+	<div class="page-container" data-context="container" >
+		
+		<p>Привет, {{profile.name}}. Твой email: {{profile.email}}</p>
+		
+		<h2>{{content.en.title}}</h2>
+		<h2>{{content.en.main_info.big}}</h2>
+		
+		<p><img src="{{image.600x400}}" /></p>
+		
+		<h2>{{content.ru.title}}</h2>
+		<h2>{{content.ru.main_info.big}}</h2>
+		
+		[[azbntple tpl="/src/block/site/page/_header-menu/.html" ]]
+		
+		[[azbntple tpl="/src/block/site/page/_tab-container/.html" ]]
+		
+		[[azbntple tpl="/src/block/site/news/_news-slider/.html" title="Новые записи в блоге" ]]
+		
+		[[azbntple tpl="/src/block/site/page/_footer-menu/.html" ]]
+		
+		[[azbntple tpl="/src/block/site/page/_menu-container/.html" ]]
+		
+	</div>
+
+</body>
+</html>
