@@ -13,9 +13,7 @@ $(function(){
 		}
 		
 		var w = block.outerWidth(true);
-		console.log('qqqqqqqqqqq ' + w);
 		var r = (r_arr[1] / r_arr[0]) * w;
-		console.log('qqqqqqqqqqq ' + r);
 		
 		block.css({
 			'height' : r + 'px',
