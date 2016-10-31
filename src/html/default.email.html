@@ -6,29 +6,61 @@
 	<link href="./../../css/email.css" rel="stylesheet">
 	
 </head>
-<body class="fecss full-height is-mainpage touchswipe theme-b0w overflow-hidden " data-fecss-jssearch="" data-fecss-modal="no-modal" data-context="container" >
+<body class="fecss overflow-hidden " data-context="container" >
 	
 	<div class="page-container" data-context="container" >
 		
-		<p>Привет, {{profile.name}}. Твой email: {{profile.email}}</p>
-		
-		<h2>{{content.en.title}}</h2>
-		<h2>{{content.en.main_info.big}}</h2>
-		
-		<p><img src="{{image.600x400}}" /></p>
-		
-		<h2>{{content.ru.title}}</h2>
-		<h2>{{content.ru.main_info.big}}</h2>
-		
-		[[azbntple tpl="/src/block/site/page/_header-menu/.html" ]]
-		
-		[[azbntple tpl="/src/block/site/page/_tab-container/.html" ]]
-		
-		[[azbntple tpl="/src/block/site/news/_news-slider/.html" title="Новые записи в блоге" ]]
-		
-		[[azbntple tpl="/src/block/site/page/_footer-menu/.html" ]]
-		
-		[[azbntple tpl="/src/block/site/page/_menu-container/.html" ]]
+		<table >
+			<tbody >
+				
+				<tr >
+					<td class="b-header " >
+						
+						<a href="http://azbn.ru/" class="e-link " >Azbn.ru</a>
+						<a href="http://azbn.ru/profile/" class="e-link " >Ваш профиль</a>
+						<a href="http://azbn.ru/about/" class="e-link " >О проекте</a>
+						
+					</td>
+				</tr>
+				
+				<tr >
+					<td class="b-content " >
+						
+						<h1>{{content.ru.title}}</h1>
+						
+						{{content.ru.main_info.big}}
+						
+					</td>
+				</tr>
+				
+				<tr >
+					<td class="b-content " >
+						
+						<p><img src="{{image.600x400}}" /></p>
+						
+					</td>
+				</tr>
+				
+				<tr >
+					<td class="b-content " >
+						
+						{{content.ru.main_info.big}}
+						
+					</td>
+				</tr>
+				
+				<tr >
+					<td class="b-footer " >
+						
+						<p class="thanks" >
+							Спасибо за внимание, администрация сайта <a href="http://azbn.ru/" >Azbn.ru</a>,<br /><a href="mailto:{{profile.email}}" >{{profile.email}}</a>
+						</p>
+						
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
 		
 	</div>
 
