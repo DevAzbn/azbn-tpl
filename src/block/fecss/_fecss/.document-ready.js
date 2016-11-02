@@ -3,7 +3,7 @@
 start .fecss document-ready
 */
 
-$(function(){
+(function(){
 	var res = 'noname-browser';
 	var userAgent = navigator.userAgent.toLowerCase();
 	if (userAgent.indexOf('msie') != -1) res = 'msie';
@@ -17,9 +17,9 @@ $(function(){
 	if (userAgent.indexOf('yabrowser') != -1) res = 'yabrowser';
 	
 	$('html').eq(0).addClass(res);
-});
+})();
 
-$(function(){
+(function(){
 	$(document.body).on('keydown', function(event){
 		event.stopPropagation();
 		
@@ -32,12 +32,12 @@ $(function(){
 			liter : String.fromCharCode(event.which),
 		}]);
 	});
-});
+})();
 
-$(function(){
+(function(){
 	moment.locale(window.navigator.userLanguage || window.navigator.language);
 	//alert(moment().format('LLLL'));
-});
+})();
 
 /*
 end .fecss document-ready

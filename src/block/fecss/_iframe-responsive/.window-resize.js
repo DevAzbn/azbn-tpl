@@ -1,4 +1,4 @@
-$(function(){
+(function(){
 	
 	$('.iframe-responsive').each(function(index){
 		
@@ -21,4 +21,4 @@ $(function(){
 		
 	});
 	
-});
+})();

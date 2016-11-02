@@ -1,1 +1,1 @@
-$(function(){var a=$(document).scrollTop(),o=$(".go-to-top");o.hasClass("active")?a<200&&o.removeClass("active"):a>200&&o.addClass("active")});
+!function(){var a=$(document).scrollTop(),t=$(".go-to-top").eq(0),o=parseInt(t.attr("data-gototop-border"))||200;t.hasClass("active")?a<o&&t.removeClass("active"):a>o&&t.addClass("active")}();

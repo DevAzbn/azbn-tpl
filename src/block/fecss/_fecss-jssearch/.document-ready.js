@@ -1,5 +1,5 @@
 
-$(function(){
+(function(){
 	
 	var body = $(document.body);
 	
@@ -12,4 +12,4 @@ $(function(){
 		}]);
 	}
 	
-});
+})();

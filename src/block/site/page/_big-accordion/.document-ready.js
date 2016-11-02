@@ -32,9 +32,9 @@ $(document.body).on('click.site.big-accordion.surface.surface-btn', '.big-accord
 });
 
 
-$(function(){
+(function(){
 	
 	$('.big-accordion .surface > .surface-content').hide();
 	$('.big-accordion .surface').attr('data-state', 'default');
 	
-})
+})();

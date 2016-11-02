@@ -3,8 +3,7 @@
 start .fecss window-resize
 */
 
-	$(
-		function() {
+	(function(){
 			
 			var wsize = {
 				xs : {
@@ -167,8 +166,8 @@ start .fecss window-resize
 			
 			
 			$('html body').eq(0).addClass(wcl).addClass(hcl);
-		}
-	);
+			
+	})();
 
 /*
 end .fecss window-resize
