@@ -1,0 +1,28 @@
+.azbn7-panel {
+	position:fixed;
+	bottom:0;
+	right:0;
+	#fe.z(10000);
+	#fe.bg(rgba(0,0,0,0.9));
+	
+	.main-list {
+		.mp0();
+		list-style-type:none;
+		
+		& > li {
+			list-style-type:none;
+			display:inline-block;
+			
+			& > a {
+				padding:1em;
+				#fe.lh(1.75em);
+				#fe.size(18px);
+				#fe.color(rgba(255,255,255,1));
+				
+				&:hover {
+					#fe.underline();
+				}
+			}
+		}
+	}
+}
