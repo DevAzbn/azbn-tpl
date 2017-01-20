@@ -13,6 +13,201 @@
 		
 		[[azbntple tpl="/src/block/site/page/_header-menu/.html" ]]
 		
+		<div class="fluid-block tab-container " data-tab-default="admin" >
+			
+			<div class="adaptive-block grid grid-12 " >
+				
+				<div class="grid-row" >
+					
+					<div class="clmn-12 clmn-xs-12 clmn-sm-12 clmn-md-12 clmn-lg-12 " >
+						<ul class="tab-btns " >
+							<li ><a class="tab-btn" href="#registration" data-tab-id="registration" >Регистрация</a></li>
+							<li ><a class="tab-btn" href="#login" data-tab-id="login" >Вход в аккаунт</a></li>
+							<li ><a class="tab-btn" href="#admin" data-tab-id="admin" >Вход администратором</a></li>
+						</ul>
+					</div>
+					
+					<div class="clear" ></div>
+					
+				</div>
+				
+				<div class="grid-row" >
+					
+					<div class="clmn-12 clmn-xs-12 clmn-sm-12 clmn-md-12 clmn-lg-12 tab-items " >
+						
+						<div class="tab-item " data-tab-id="registration" >
+							
+							<form action="/profile/create/" method="POST" data-input-status="" >
+								
+								<div class="w100-block grid grid-12 " >
+									<div class="grid-row " >
+											
+											<div class="clmn-12 clmn-xs-12 clmn-sm-5 clmn-md-5 clmn-lg-5 " >
+													
+													<div class="input-block " data-required="text" data-input-status="" >
+														<label>Логин <span class="status" ></span></label>
+														<input name="login" value="" />
+													</div>
+													
+													<div class="input-block " data-required="text" data-input-status="" >
+														<label>Отображать как <span class="status" ></span></label>
+														<input name="view_as" value="" />
+													</div>
+													
+													<div class="input-block " data-required="email" data-input-status="" >
+														<label>E-mail <span class="status" ></span></label>
+														<input name="email" value="" />
+													</div>
+													
+													<div class="input-block "  data-required="text" data-input-status="" >
+														<label>Пароль <span class="status" ></span></label>
+														<input type="password" name="pass" />
+													</div>
+													
+													<div class="input-block "  data-required="check-pass" data-input-status="" >
+														<label>Повторите пароль <span class="status" ></span></label>
+														<input type="password" name="pass2" />
+													</div>
+													
+											</div>
+											
+											<div class="clmn-12 not-xs clmn-sm-1 clmn-md-1 clmn-lg-1 " >
+												&nbsp;
+											</div>
+											
+											<div class="clmn-12 clmn-xs-12 clmn-sm-6 clmn-md-6 clmn-lg-6 " >
+													
+													<div class="input-block " >
+														<label>Адрес Вашего сайта <span class="status" ></span></label>
+														<input name="url" value="" />
+													</div>
+													
+													<div class="input-block " >
+														<label>Ссылка на профиль ВК <span class="status" ></span></label>
+														<input name="vk_url" value="" />
+													</div>
+													
+													<div class="input-block " >
+														<label>Ссылка на профиль Twitter <span class="status" ></span></label>
+														<input name="twitter_url" value="" />
+													</div>
+													
+													<div class="input-block " >
+														<label>Адрес <span class="status" ></span></label>
+														<input name="adr" value="" />
+													</div>
+													
+													<div class="input-block " >
+														<label>Телефон <span class="status" ></span></label>
+														<input name="phone" value="" />
+													</div>
+													
+													<input type="hidden" name="timezone" value="Europe/Moscow" />
+													
+													
+											</div>
+											
+											<div class="clmn-12 clmn-xs-12 clmn-sm-12 clmn-md-12 clmn-lg-12 " >
+												
+													<div class="submit-block "  data-input-status="" >
+														<input type="submit" value="Создать аккаунт" />
+														<span class="help" >Нажмите для отправки формы</span>
+													</div>
+												
+											</div>
+											
+										<div class="clear" ></div>
+									</div>
+								</div>
+								
+							</form>
+							
+						</div>
+						
+						<div class="tab-item " data-tab-id="login" >
+							
+							<div class="w100-block grid grid-12 " >
+								<div class="grid-row " >
+									
+									<div class="clmn-12 clmn-xs-12 clmn-sm-6 clmn-md-6 clmn-lg-6 " >
+										<div class="sandbox style-b0w " >
+											<p>Если у Вас уже имеется аккаунт, войдите в него.</p>
+										</div>
+										
+										<form action="/profile/start/" method="POST" data-input-status="" >
+											
+											<div class="input-block " data-required="text" data-input-status="" >
+												<label>Логин <span class="status" ></span></label>
+												<input name="login" value="" />
+											</div>
+											
+											<div class="input-block "  data-required="text" data-input-status="" >
+												<label>Пароль <span class="status" ></span></label>
+												<input type="password" name="pass" />
+											</div>
+											
+											<div class="submit-block "  data-input-status="" >
+												<input type="submit" value="Войти" />
+												<span class="help" >Нажмите для отправки формы</span>
+											</div>
+											
+										</form>
+									</div>
+									
+									<div class="clear" ></div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="tab-item " data-tab-id="admin" >
+							
+							<div class="w100-block grid grid-12 " >
+								<div class="grid-row " >
+									
+									<div class="clmn-12 clmn-xs-12 clmn-sm-6 clmn-md-6 clmn-lg-6 " >
+										<div class="sandbox style-b0w " >
+											<p>Если у Вас уже имеется аккаунт, войдите в него.</p>
+										</div>
+										
+										<form action="/login/start/" method="POST" data-input-status="" >
+											
+											<div class="input-block " data-required="text" data-input-status="" >
+												<label>Логин <span class="status" ></span></label>
+												<input name="login" value="" />
+											</div>
+											
+											<div class="input-block "  data-required="text" data-input-status="" >
+												<label>Пароль <span class="status" ></span></label>
+												<input type="password" name="pass" />
+											</div>
+											
+											<div class="submit-block "  data-input-status="" >
+												<input type="submit" value="Войти" />
+												<span class="help" >Нажмите для отправки формы</span>
+											</div>
+											
+										</form>
+									</div>
+									
+									<div class="clear" ></div>
+								</div>
+							</div>
+							
+						</div>
+					
+					</div>
+					
+					<div class="clear" ></div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		
 		<div class="fluid-block " >
 			
 			

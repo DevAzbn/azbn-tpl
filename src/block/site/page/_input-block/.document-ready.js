@@ -45,7 +45,7 @@ $(document.body).on('site.form.required.check', 'form', {}, function(event){
 
 
 
-$(document.body).on('keyup.site blur.site focus.site', '.input-block[data-required="text"] input:not([type="search"]), .input-block[data-required="text"] textarea', {}, function(event){
+$(document.body).on('keyup.site blur.site focus.site', '.input-block[data-required="text"] input:not([type="search"]), .input-block[data-required="text"] textarea, .input-block[data-required="password"] input', {}, function(event){
 	event.preventDefault();
 	
 	var input = $(this);
@@ -133,7 +133,7 @@ $(document.body).on('change.site blur.site', '.input-block select', {}, function
 
 $(function(){
 	
-	$('.input-block input, .input-block textarea, .input-block select').trigger('blur.site');
 	$('form').trigger('site.form.required.check');
+	$('.input-block input, .input-block textarea, .input-block select').trigger('blur.site');
 	
 })
