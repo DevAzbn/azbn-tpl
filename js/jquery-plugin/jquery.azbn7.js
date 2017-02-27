@@ -296,14 +296,16 @@ jquery-плагин
 			var el = $(this);
 			
 			var wgt_uid = $.Azbn7.randstr();
-			var __class = $.Azbn7.config.prefix + '-widget';
+			var __class = $.Azbn7.config.prefix + '-widget-' + wgt_uid;
 			
 			el
 				.addClass(__class)
-				.attr('data-' + $.Azbn7.config.prefix + '-widget', wgt_uid)
 			;
 			
-			body.on($.Azbn7.config.prefix + '.widget.' + wgt_uid, '[data-' + $.Azbn7.config.prefix + '-widget="' + wgt_uid + '"]', {}, function(event){
+			body.on($.Azbn7.config.prefix + '.widget.getData', '.' + __class, {}, function(event, req_data, cb){
+				event.preventDefault();
+				
+				$.Azbn7.api(req_data, cb);
 				
 			});
 			
